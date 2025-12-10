@@ -17,6 +17,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://gemlay-4vlw90mo9-areej-fatima.vercel.app",
+      "https://gemlay-ui.vercel.app/",
+      "https://gemlay-8ywts92y4-areej-fatima.vercel.app/",
     ],
     credentials: true,
   })
