@@ -68,6 +68,7 @@ exports.me = async (req, res) => {
   }
 };
 // controller
+
 exports.logout = async (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
@@ -76,7 +77,6 @@ exports.logout = async (req, res) => {
   });
   res.json({ message: "Logged out" });
 };
-
 // Google OAuth callback
 exports.googleCallback = (req, res) => {
   const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET, {
@@ -89,5 +89,9 @@ exports.googleCallback = (req, res) => {
     secure: true,
   });
 
-  res.redirect("http://localhost:5173/");
+res.redirect(
+  process.env.NODE_ENV === "production"
+    ? "https://gemlay-4vlw90mo9-areej-fatima.vercel.app/"
+    : "http://localhost:5173/"
+);
 };
