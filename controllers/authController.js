@@ -91,7 +91,7 @@ exports.googleCallback = (req, res) => {
 
 res.redirect(
   process.env.NODE_ENV === "production"
-    ? "https://gemlay-4vlw90mo9-areej-fatima.vercel.app/"
+    ? "https://gemlay-8ywts92y4-areej-fatima.vercel.app"
     : "http://localhost:5173/"
 );
 };
