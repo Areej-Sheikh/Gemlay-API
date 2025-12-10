@@ -16,6 +16,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "https://gemlay-ui.vercel.app",
       "https://gemlay-8ywts92y4-areej-fatima.vercel.app",
       "https://gemlay-8yn98pq7b-areej-fatima.vercel.app",
     ],
