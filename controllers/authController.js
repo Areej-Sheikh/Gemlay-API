@@ -67,6 +67,15 @@ exports.me = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+// controller
+exports.logout = async (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    sameSite: "none",
+    secure: true,
+  });
+  res.json({ message: "Logged out" });
+};
 
 // Google OAuth callback
 exports.googleCallback = (req, res) => {

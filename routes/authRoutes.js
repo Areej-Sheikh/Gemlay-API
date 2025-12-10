@@ -8,6 +8,7 @@ const requireAuth = require("../middlewares/requireAuth");
 router.get("/me", requireAuth, authController.me);
 router.post("/signup", authController.signup);
 router.post("/login", authController.login);
+router.post("/logout", authController.logout);
 
 router.get(
   "/google",
